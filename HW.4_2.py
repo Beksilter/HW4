@@ -6,16 +6,7 @@
 from random import randrange
 
 def filter_list(*args):
-
     yield [args[i + 1] for i in range(len(args) - 1) if args[i + 1] > args[i]]
-
-    # result = []
-    # for i in range(len(args)-1):
-    #     if args[i + 1] > args[i]:
-    #         result.append(args[i + 1])
-    #         yield args[i + 1]
-
-
 
 rand_list = [randrange(101) for el in range(25)]
 new_list = list(filter_list(*rand_list))
